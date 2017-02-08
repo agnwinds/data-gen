@@ -1,0 +1,10 @@
+The data in this directory is for the free-free gaunt factors from Sutherland 1997. The three data files downloaded directly from the website http://www.mso.anu.edu.au/~ralph/data/freefree/ are:
+
+
+gffew.dat.txt
+gffgu.dat.txt
+gffint.dat.txt
+
+with the last one being the one we currently use. The translation to python friendly format is simply the commenting out of comment lines with a hash symbol, and the insertion of the label FF_GAUNT at the start of each data line. The python friendly data file is 
+
+gffint.dat
