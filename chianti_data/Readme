@@ -4,3 +4,7 @@ They expect to be placed at the same level in the directory structure as the Chi
 chainti_rr_dr_to_py.py simply takes all dielectrconic recombination rates and radiative recombinationbs rates
 and puts them in files called chianti_dr.dat and chianti_rr.dat with appropriate headers and keywords
 to allow read_atomic data to read them in.
+
+coll_stren_lookup.py requires the list of lines to be in the same directory (lines_linked_ver_2.py)
+It searches the chianti database .scups files for matches, and puts those matching collision
+strength lines in a file called ver_upsilon_linked.dat.
