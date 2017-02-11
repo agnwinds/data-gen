@@ -1,0 +1,56 @@
+Verner, D. A., Verner, E. M., and Ferland, G. J.
+Atomic data for permitted resonance lines of atoms and ions from H to Si, 
+and S, Ar, Ca and Fe. 1996, Atomic Data Nucl. Data Tables, in press.
+
+
+Table I. Wavelengths and Oscillator Strengths of Permitted Resonance 
+Absorption Lines. See text of the paper for explanation.
+
+Byte-per-byte description of file: atom1.dat 
+Number of multiplets: 1877
+------------------------------------------------------------------------------
+   Bytes Format  Units   Label           Explanations
+------------------------------------------------------------------------------
+Averaged values for multiplets:
+   1-  4  A4     ---     Species         Atom or ion            
+   6- 37  A32    ---     Transition      Transition              
+  40- 46  A7     ---     Multiplet       Multiplet           
+  48- 56  F9.4   Angs    lambda          Vacuum wavelength
+  58- 72  F15.6  cm^-1   E_i             Energy of lower level
+  74- 88  F15.6  cm^-1   E_k             Energy of upper level
+  90- 91  I2     ---     g_i             Lower level statistical weight
+  93- 94  I2     ---     g_k             Upper level statistical weight   
+  96-103  E8.2   s^-1    A_ik            Transition probability               
+ 105-112  E8.2   ---     f_ik            Oscillator strength
+ 114-115  I2     ---     n               Number of lines in the multiplet
+Values for individual lines:
+  48- 56  F9.4   Angs    lambda          Vacuum wavelength
+  58- 72  F15.6  cm^-1   E_i             Energy of lower level
+  74- 88  F15.6  cm^-1   E_k             Energy of upper level
+  90- 91  I2     ---     g_i             Lower level statistical weight
+  93- 94  I2     ---     g_k             Upper level statistical weight   
+  96-103  E8.2   s^-1    A_ik            Transition probability               
+ 105-112  E8.2   ---     f_ik            Oscillator strength
+---------------------------------------------------------------------------
+If experimental energy of an upper level is unknown, wavelength and
+energy of the upper level are given as 0.0. For FeI: if a multiplet
+averaged transition probability and oscillator strength are unknown,
+they are given as 0.0.
+
+
+Table II. Finding List of Lines.
+See text of the paper for explanation.
+
+Byte-per-byte description of file: atom2.dat 
+Number of lines: 5971
+-----------------------------------------------------------------------------
+   Bytes Format  Units   Label           Explanations
+-----------------------------------------------------------------------------
+   1-  9  F9.4   Angs    lambda          Vacuum wavelength
+  11- 14  A4     ---     Species         Atom or ion            
+  16- 17  I2     ---     g_i             Lower level statistical weight
+  19- 20  I2     ---     g_k             Upper level statistical weight   
+  22- 29  E8.2   ---     f_ik            Oscillator strength
+-----------------------------------------------------------------------------
+
+

@@ -1,0 +1,70 @@
+
+
+# This awkscript takes files retrieved from Dina Verner's web sight and creates an elements file, 
+# and ions file, and a combined elements and ions file which can be used as part of the input atomic
+# data for python, and as inputs to the program py_read_verner, which creates a set of lines to
+# be used by python.
+
+# Note that file names are all hardwired
+
+# Written by ksl	01 nov
+
+# Here is the awk script for the element file
+
+awk '
+BEGIN {
+print "\n\n# Elemental abundances from Verner, Barthel & Tytler 1994 A&AS, 108,287"
+print "# Output format: Name z  Relative_abun atomic_weight\n\n"
+}
+$1=="#" {print}
+$1!="#" {
+	if($4>5) {
+		printf("Element   %2d   %2s   %5.2f   %10f\n",$2,$1,$4,$3)
+		}
+	else {
+		printf("# Element   %2d   %2s   %5.2f   %10f\n",$2,$1,$4,$3)
+		}
+	}
+' abun.dat > elements_ver.py
+
+
+# This is the awk script fot the ion file
+awk '
+length($1)>1 { 
+# Then you must split it 
+            element=substr($1,1,2)
+            ion=substr($1,3)
+            print element,ion,$2,$3,$4,$5,$6,$7,$8,$9,$10
+}
+length($1)==1 {
+             print
+             }
+' ions.dat >ions_split.dat
+
+awk '
+BEGIN {
+print "\n\n# Ions and thresholds from Verner, Barthel & Tytler 1994 A&AS, 108,287 list"
+print "# Output format"
+print "# IonV  element.name element.z ionstate g_ground ionizpotential(eV)  maxlevels maxnlte   Config"
+print "# maxlevels and maxnlte set at 30 and 0 respectively are simply place holders\n\n"
+
+
+eold="H"  # Implies that we expect the first element to be Hydrogen
+zold=1
+istateold=1
+}
+$1!=eold{ #Then this is a new element
+printf("IonV   %2s %3d %3d %3d %10.4e %3d %3d     %s \n\n",eold,zold,istateold+1,2,1.e20,0,0,"Bare")
+eold=$1
+}
+{
+printf("IonV   %2s %3d %3d %3d %10.5f %3d %3d     %s \n",$1,$3,$3-$4+1,$8,$6,1000,0,$5)
+zold=$3
+istateold=$3-$4+1
+}
+' ions_split.dat >ions_ver.py
+
+rm ions_split.dat
+
+# Now combine the two files
+cat  elements_ver.py  ions_ver.py > elem_ions_ver.py

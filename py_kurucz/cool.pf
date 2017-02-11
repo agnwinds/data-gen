@@ -1,0 +1,11 @@
+atom_ion(infile)                   elem_ions_ver.py
+Kurucz.linelist                  linelist/gfall.dat
+levels(outfile)                       cool_levels_kur.py
+lines_simple(outfile)           cool_lines_simple_kur.py
+Temperature                                  20000
+wave.min(Ang)                                     0
+wave.max(Ang)                                 10000
+ion.ipot.min(eV)                                  8
+ion.ipot.max(ev)                               1000
+gf_boltzmann_min                              0.001
+lines_linked(output)              cool_lines_linked_kur.py
