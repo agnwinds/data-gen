@@ -5,31 +5,29 @@
 
 
 Synopsis:  
-	This code parses data from verner et al (1996) 
-	and verner and yakovlev (1995) into python
-	input files
+	This code parses electron and photon yield data
+	from Kaastra and Mewe into new data files which
+	link it to inner shell PI rates from Verner and
+	Vakovlev.
 	
 
 Description:  
 
-	This code expects two data files to be present in
+	This code expects three data files to be present in
 	the directory. 
-	Firstly, it uses the old VFKY data file present 
-	in the atomic directory since time immorial.
-	To aid input, a title line is added to the top
+	Firstly, it uses the inner shell photoionization 
+	rate data file vy_innershell_tab.data which is in 
+	turn parsed from VFKY and VY filed.
 	
-	title z nelec eth emax e0 sigma0 ya P yw y0 y1
-	
-	This data file should be titled photo_vfky.data
 	
 	This is supplemented by data downloaded from vizir
-	accessed via the adsabs page for verner and yakovlev.
-	It should be cut an pasted into a file called 
-	photo_partial_vy.data and a title line appended
+	accessed via the adsabs page for kaastra and mewe.
+	The data for electron yield should be in a file called
+	electron_yield.data and the photon yield in
+	fluorescent_yield.data. 
 	
-    recno z nelec n l eth e0 sigma0 ya P yw
-	
-	
+	The code matches up the n/l code used in K+M to the 
+	n and l level information in VFKY. 
 	
 	
 
@@ -39,12 +37,9 @@ Arguments:
 
 Returns:
 
-	Two tabulated data files of cross sections. one
-	for outer shell ionization which should in principle
-	be similar to the file produced by JM, but with 
-	actual data past the inner shell threshold rather
-	than extrapolations, and a new one which had inner 
-	shell ionization cross sections.
+	Two tabulated data files of electron and photon 
+	yields. Each contains a cross reference to the n
+	and l numbers in the relevant VY innershall record.
 
 Notes:
 									   
