@@ -64,14 +64,14 @@ History:
 
 import sys
 import numpy as np
-from pyhdf import SD
+# from pyhdf import SD
 from astropy import constants as consts
 from astropy import units as u
 from astropy.io import ascii
 from astropy.table import Table
 import matplotlib.pyplot as plt
-import astroconst as ac
-import atomic_data_sub as ads
+# import astroconst as ac
+# import atomic_data_sub as ads
 import subprocess
 
 data1=ascii.read('photo_vfky.data')
