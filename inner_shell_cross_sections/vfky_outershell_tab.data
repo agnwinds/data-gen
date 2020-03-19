@@ -1,5 +1,5 @@
 # This is outer shell photoionization data from Verner et al (1996) 1996ApJ...465..487V (VFKY)
-# supplemented by outer shell data from Verner and Yakovlev (1995) 	1995A&AS..109..125V (VY)
+# supplemented by outer shell data from Verner and Yakovlev (1995)     1995A&AS..109..125V (VY)
 # The data is from VFKY up to the inner shell edge (if any) then from VY past this point
 # It is processed via the python script verner_2_py.py from simple text dumps of the online
 # data from these two papers

@@ -84,6 +84,9 @@ npoints=100   #The number of points in the interpolation
 # set up a rather complex array which defines the subshells which are added together to make the outer shell cross section
 # the numbers are general up to N=18 for all elements, however for heavier elements, it becomes much more complex.
 # the vfky database ignores most heavier elements, only dealing with z=20 (Calcium) and z=26 (Iron)
+# The way to read these lists is as follows. The list is order by the number of electrons an ion has.  Each
+# entry in the list refers to values of n and l, for that ion which are outer shell partial ionization x-sections
+# in VY95.  
 
 
 outer_shell=[	[[1,0]],
