@@ -69,6 +69,8 @@
 #include	 <stdio.h>
 #include        <strings.h>
 #include        <stdlib.h>
+#include        "templates.h"
+#include        "log.h"
 
 #define HC	1.98587e-16
 #define C	2.997925e10

@@ -45,6 +45,10 @@
 #include	<math.h>
 #include	<stdio.h>
 #include 	<strings.h>
+#include        <stdlib.h>
+#include        "templates.h"
+#include        "log.h"
+
 #define		LINELENGTH 132
 
 #define RYD     13.605698	//Rydberg in eV

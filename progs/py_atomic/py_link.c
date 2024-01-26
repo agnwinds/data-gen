@@ -41,6 +41,7 @@ Nothing produced by this code is used in python...up to at least version python_
 #include	 <stdio.h>
 #include        <strings.h>
 #include        <stdlib.h>
+#include        "log.h"
 
 #define HC	1.98587e-16
 #define C	2.997925e10

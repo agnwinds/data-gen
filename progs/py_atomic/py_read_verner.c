@@ -72,7 +72,9 @@ for sophisticated line treatment the program py_link must be run successfully.
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <strings.h>
+#include "templates.h"
+#include "log.h"
 
 #define LINELENGTH 132
 #define KLINELENGTH 160
@@ -225,7 +227,7 @@ main (argc, argv)
     }
 
   else
-    read_ions (ionfile, levelfile);
+    read_ions (ionfile, levelfile,0);
 
   getlines ();
   putlines (linefile);
