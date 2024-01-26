@@ -61,6 +61,7 @@
 			where available.  1.0 in the output for this indicates
 			no known value.  It's not entirely clear how to 
 			like this to the levels.
+        2401    ksl     This program has been updated to run on OSX
 
 
 ************************************************************************/
@@ -454,7 +455,7 @@ wavmax/=10.;
 
       for (n = 0; n < nlev; n++)
 	{
-	  fprintf (lptr, "LevKur %3d %3d %3d  %3.0f %10.6f\n", ion[nn].z,
+	  fprintf (lptr, "Level %3d %3d %3d  %3.0f %10.6f\n", ion[nn].z,
 		   ion[nn].istate, n, config[n].g, config[n].ex);
 	}
     }
