@@ -131,22 +131,22 @@ for line in inp.readlines():
                         best_gf=test_gf
                         match=1
                         best=i
-                    else:
-                        break
-                if match==1:
-                    print("line ",iline,el,ion,lamb," has ",match," matches")
-                    coll_dat.append(lines[best])
-                    out.write("CSTREN "+line[:-1]+' '+lines[best])
-                    out.write("SCT" +lines[best+1])
-                    out.write("SCUPS "+lines[best+2])
-                    SCT.append(lines[best+1])
-                    SCUPS.append(lines[best+2])
-                elif match>1:
-                    print("Uh oh, we have more than one match for ",data)
             else:
-                print("no match for ",data)			
+                break
+        if match==1:
+            print("line ",iline,el,ion,lamb," has ",match," matches")
+            coll_dat.append(lines[best])
+            out.write("CSTREN "+line[:-1]+' '+lines[best])
+            out.write("SCT" +lines[best+1])
+            out.write("SCUPS "+lines[best+2])
+            SCT.append(lines[best+1])
+            SCUPS.append(lines[best+2])
+        elif match>1:
+            print("Uh oh, we have more than one match for ",data)
         else:
-            print("line ",iline,el,ion,lamb," has no data in chianti")
+                print("no match for ",data)			
+    else:
+         print("line ",iline,el,ion,lamb," has no data in chianti")
 		
 '''
         input.close()
