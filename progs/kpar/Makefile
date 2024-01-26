@@ -40,7 +40,7 @@ clean:
 # Test routimes
 
 t_lineio: $(FILES) t_lineio.o
-	gcc t_lineio.o $(FILES) -o Test/t_lineio
+	gcc t_lineio.o $(FILES) -o ../../bin/t_lineio
 
 t_elog: t_elog.o rdpar.o log.o lineio.o
-	gcc t_elog.o rdpar.o log.o lineio.o -o Test/t_elog
+	gcc t_elog.o rdpar.o log.o lineio.o -o ../../bin/t_elog
