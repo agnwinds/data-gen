@@ -5,7 +5,7 @@ BIN = ../../bin
 CC = gcc
 #CFLAGS = -xpg -xCC
 # CFLAGS = -g -xCC -I$(INCLUDE)    
-CFLAGS = -g  -I$(INCLUDE)    
+CFLAGS = -g -pg  -I$(INCLUDE)    
 LDFLAGS= -L$(LIB) -lm -lkpar 
 
 prototypes:
