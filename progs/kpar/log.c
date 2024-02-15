@@ -349,7 +349,7 @@ sane_check (x)
      double x;
 {
   int i;
-  if ((i = finite (x)) == 0)
+  if ((i = isfinite (x)) == 0)
     {
       Error ("sane_check: %d %e\n", i, x);
       return (-1);
